@@ -3,13 +3,136 @@
 */
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 0px;
+    padding: 5px;
     margin: 5px;
     
+    
 }
- 
+#referencia {
+    color: rgba(0, 0, 0, 0);
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+    /* position: absolute; */
+    /* top: -5%;
+    left: 118%; */
+}
+.caja {
+    height: 30px;
+    width: 150px;
+    border: 2px solid rgb(0, 153, 238);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 18px;
+    padding: 5px;
+    height: 35px;
+    width: 200px;
+}
+.caja:hover {
+    border: 2px solid rgb(238, 107, 0);
+    
+}
 
-.desplegables span + input{
-    display: block;
+#selectores, #caja-foto_centrador ,#caja-foto_electrodo{
+    
+    display: inline-block;
 }
- 
+
+#selectores{   margin-top: 0px; 
+                padding-top: 0px;}
+
+
+#main_content > h2 { margin-bottom: 0px;
+                     padding-bottom: 0px;}
+
+
+#cota-inferior {
+    border-top: solid black;             
+    border-width: 0.20em;
+    
+    text-align: center;
+    
+    position: relative;
+
+    bottom: 10px;
+    left: 25px;
+    width: 70px;
+
+    margin: 0px;
+    padding: 0px;
+
+    font-size: 0.9em;
+    
+}
+
+#cota-lateral {
+    border-top: solid black;             
+    border-width: 0.15em;
+    width: 160%;
+    text-align: center;
+    position: relative;
+    transform: rotate(-90deg);
+    /* No usar %porcentajes%, me da muchos problemas,usar referencias "Estaticas" */
+    top: 8.3em; 
+    right: -1em;
+    
+}
+
+
+label{
+    font-weight: bold;
+}
+
+
+#caja-foto_figure {
+    
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    /* Para alinearlo con los selectores */
+    top: 30px; 
+} 
+
+#btn-inferior{
+    padding: 20px;
+}
+
+
+#btn-inferior_0{
+    color: rgb(0, 0, 0);
+    background-color: rgb(4, 184, 255);
+    border: solid 2px;
+    border-radius: 5px;
+
+}
+#btn-inferior_0:hover{
+    color: rgb(0, 0, 0);
+    background-color: aqua;
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* PRUEBAS */
+
+#main_content {
+    background-color: red;
+}
+
+
+#caja-foto_centrador{
+    background-color: rgb(0, 240, 248);
+}
+
+#caja-foto_electrodo {
+    background-color: blueviolet;
+}
+
+#referencia {
+    background-color: rgb(255, 251, 0);
+    /* Como la cota lateral, al movera deja un hueco, estoy moviendo el contenedor padre hacia arriba para parchear eso  (Igual que con la caja de la foto*/
+    
+}   

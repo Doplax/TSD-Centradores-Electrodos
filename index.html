@@ -1,69 +1,87 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="https://tecsolda.com/wp-content/uploads/2022/05/cropped-logo-tecsolda-32x32.png">
-
     <title>Electrodos</title>
-  
 </head>
 <body>
-    <h2>Selector de Electrodos</h2>
-    <div id="selector">
+    <div id="main_content">
+        <h1>Conozca su referencia:</h2>
+        <div id="selectores">
+
+            <h2 id="referencia">XM00SSNN</h2>
+            <label for="material"> Material: <br>
+                <select id="material" class="caja"> 
+                    <option value="nada"></option>
+                    <option value="ceramica">Ceramica</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </label> <br>
+
+            <label for="rosca">Rosca:  <br>
+                <select id="rosca" class="caja"> 
+                    <option value="2"></option>
+                    <option value="2">2</option>
+                    <option value="2">3</option>
+                    <option value="2">3</option>
+                    <option value="2">3</option>
+
+
+                </select>
+            </label> <br>
+            
+
+            <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
+            <label for="diametro"> Diametro: <br>
+                <select id="diametro" class="caja"> 
+                    <option value="MM"></option>
+
+                    
+                </select>
+            </label> <br> 
+            
+                
+        </div>
         
-        <div class="desplegables" >
-            <span>Contenendor 1</span> 
-            <input list="options" id="option-choice"> 
-            <datalist id="options">
-                <option value="option 1">
-                <option value="option 2">
-                <option value="option 3">
-                <option value="option 4">
-            </datalist>
+        <div id="caja-foto_centrador">
+            <figure id="caja-foto_figure">
+                <img id="foto_centrador" width="100">
+            </figure>
         </div>
-
-        <div class="desplegables" >
-            <span>Contenendor 2</span>
-            <input list="options" id="option-choice"> 
-            <datalist id="options">
-                <option value="option1">
-                <option value="option2">
-                <option value="option3">
-                <option value="option4">
-            </datalist>
-        </div>
-
-        <div class="desplegables" >
-            <span>Contenendor 3</span>
-            <input list="options" id="option-choice"> 
-            <datalist id="options">
-                <option value="option1">
-                <option value="option2">
-                <option value="option3">
-                <option value="option4">
-            </datalist>
-        </div>
-
-        <div class="desplegables" >
-            <span>Contenendor 4</span>
-            <input list="options" id="option-choice"> 
-            <datalist id="options">
-                <option value="option1">
-                <option value="option2">
-                <option value="option3">
-                <option value="option4">
-            </datalist>
+        
+        <div id="caja-foto_electrodo">
+            <figure id="caja-foto_figure">
+                <img id="foto_electrodo" width="100">
+            </figure>
+            
         </div>
 
             
+        
     </div>
- 
-    <button id="btn">Enviar</button>
+    <div id="selector-electrodo">
+        <p>Si quires, puedes encontrar el Centrador que necesitas introduciendo el tamaño de la rosca</p>
+        
 
+        <label for="forma">Forma: para sacar el centrador <br>
+            <select id="forma" class="caja" name="prueba"> 
+                <option value="PP"></option>
+                <option value="DD">Diametro Doble</option>
+                <option value="DS">Diametro Simple</option>
+                <option value="DC">Diametro Corto</option>
+            </select>
+        </label> <br>
+    </div>
+    
 
+    
+    
     <script src="./script.js"></script>
+
+    
 </body>
 </html>
