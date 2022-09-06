@@ -32,6 +32,10 @@
     
 }
 
+#diametro-choice {
+    box-sizing: border-box;
+}
+
 #selectores, #caja-foto_centrador ,#caja-foto_electrodo{
     
     display: inline-block;

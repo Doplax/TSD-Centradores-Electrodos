@@ -37,11 +37,13 @@
 
             <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
             <label for="diametro"> Diametro: <br>
-                <select id="diametro" class="caja"> 
-                    <option value="MM"></option>
+                <input list="diametro" class="caja" id="diametro-choice"> 
+                <datalist id="diametro">
+                    <option value=""></option>
+                </datalist>     
 
                     
-                </select>
+                
             </label> <br> 
             
                 
@@ -55,7 +57,7 @@
         
         <div id="caja-foto_electrodo">
             <figure id="caja-foto_figure">
-                <img id="foto_electrodo" width="100">
+                <img id="foto_electrodo">
             </figure>
             
         </div>
