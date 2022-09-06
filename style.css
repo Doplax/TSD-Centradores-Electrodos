@@ -6,5 +6,10 @@
     padding: 0px;
     margin: 5px;
     
-    
 }
+ 
+
+.desplegables span + input{
+    display: block;
+}
+ 
