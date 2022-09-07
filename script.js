@@ -114,14 +114,14 @@ function cambairFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
     imagen_1.src = inicio_ruta + material_value + "_1.png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
     figcap_1.innerHTML = "Vista Superior"
     
-    // anadirCota();
+    anadirCotas();
     // cambiarCota();
     
 
 }
 
 
-// function cambairCentrador()
+// function cambairFotoCentrador() // Hay que actualizar esto
 // {
 //     // Sub Funcion de comprobarSelectores()
 //     // Esta funcion no se ejecutarar hasta que el array "validar_selectores" sean todas verdadero.
@@ -140,82 +140,87 @@ function cambairFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
 // }
 
 
-function anadirCota()   // Sub-Function of: cambiarCentrador()
+function anadirCotas()   // Sub-Function of: cambiarCentrador()
 {
     /* 
     FUNCIONAMIENTO: La funcion comprobara si los elementos a crear existen, si existen, pasara sin hacer nada
-    Una vez haya cargado la , deberemos cargar las cotas, para ello lo que haremos es cargar 2 <div>, cada uno con un ID unico para vincularlo con el estilo de CSS -> IDs (cota-inferior, cota-lateral).
+    Una vez haya cargado la foto, deberemos cargar las cotas, para ello lo que haremos es cargar 2 <div>, cada uno con un ID unico para vincularlo con el estilo de CSS -> IDs (cota-inferior, cota-lateral).
     */
     temp = document.getElementById("cota-inferior");
-    if (temp == null) {
-  
+    if (temp == null) 
+    {
 
-    
-    let cajaImagen    =  document.getElementById("caja-_figure");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
-    
+    // FOTO 0
+    let cajaImagen_0    =  document.getElementById("figure_foto-0");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
+
 
     // COTA INFERIOR
     let cotaInferior        = document.createElement("div");
     cotaInferior.id         = "cota-inferior";
-    cajaImagen.appendChild(cotaInferior);
-    
+    cajaImagen_0.insertBefore(cotaInferior, cajaImagen_0.children[1]);
+
 
     // COTA LATERAL
     let cotaLateral        = document.createElement("div");
     cotaLateral.id         = "cota-lateral";
     // cajaImagen.appendChild(cotaLateral);
-    cajaImagen.insertBefore(cotaLateral,cajaImagen.children[0])
-}
-}
-
-function cambiarCota()  // cambiarCentrador()
-{ // Sub-Function of: cambiar()
-    m = metrico.value;
-    f = forma.value;
+    cajaImagen_0.insertBefore(cotaLateral, cajaImagen_0.children[0])
 
 
-    switch (m) {
-        case ("04"):
-            document.getElementById("cota-inferior").innerHTML = "10 mm"
-
-            if    (f == "DC")   {document.getElementById("cota-lateral").innerHTML = "26.5 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "31 mm"  }
-
-            break;
-        
-        case ("06"):
-            document.getElementById("cota-inferior").innerHTML = "11,5 mm"
-
-            if    (f == "DC")   {document.getElementById("cota-lateral").innerHTML = "27.5 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "34 mm"}
-            
-            break;
-
-        case ("08"):
-            document.getElementById("cota-inferior").innerHTML = "13.5 mm"
-            
-            if     (f == "DC")  {document.getElementById("cota-lateral").innerHTML = "28.3 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "34 mm"}
-
-            break;
-        
-        case ("10"):
-            document.getElementById("cota-inferior").innerHTML = "16 mm";
-
-            if     (f == "DC")  {document.getElementById("cota-lateral").innerHTML = "32.3 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "40 mm"}
-
-            break;
-
-        case ("12"):
-            document.getElementById("cota-inferior").innerHTML = "18 mm"
-            
-            if (f == "DC") {document.getElementById("cota-lateral").innerHTML = "34.1 mm"}
-            else {document.getElementById("cota-lateral").innerHTML = " 43 mm"}
-
-            break;
+    // FOTO 1
     }
+
+
 }
+
+// function cambiarCota()  // cambiarCentrador()
+// { // Sub-Function of: cambiar()
+//     m = metrico.value;
+//     f = forma.value;
+
+
+//     switch (m) {
+//         case ("04"):
+//             document.getElementById("cota-inferior").innerHTML = "10 mm"
+
+//             if    (f == "DC")   {document.getElementById("cota-lateral").innerHTML = "26.5 mm"}
+//             else                {document.getElementById("cota-lateral").innerHTML = "31 mm"  }
+
+//             break;
+        
+//         case ("06"):
+//             document.getElementById("cota-inferior").innerHTML = "11,5 mm"
+
+//             if    (f == "DC")   {document.getElementById("cota-lateral").innerHTML = "27.5 mm"}
+//             else                {document.getElementById("cota-lateral").innerHTML = "34 mm"}
+            
+//             break;
+
+//         case ("08"):
+//             document.getElementById("cota-inferior").innerHTML = "13.5 mm"
+            
+//             if     (f == "DC")  {document.getElementById("cota-lateral").innerHTML = "28.3 mm"}
+//             else                {document.getElementById("cota-lateral").innerHTML = "34 mm"}
+
+//             break;
+        
+//         case ("10"):
+//             document.getElementById("cota-inferior").innerHTML = "16 mm";
+
+//             if     (f == "DC")  {document.getElementById("cota-lateral").innerHTML = "32.3 mm"}
+//             else                {document.getElementById("cota-lateral").innerHTML = "40 mm"}
+
+//             break;
+
+//         case ("12"):
+//             document.getElementById("cota-inferior").innerHTML = "18 mm"
+            
+//             if (f == "DC") {document.getElementById("cota-lateral").innerHTML = "34.1 mm"}
+//             else {document.getElementById("cota-lateral").innerHTML = " 43 mm"}
+
+//             break;
+//     }
+// }
 
 // ELECTRODOS
 
