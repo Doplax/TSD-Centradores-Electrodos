@@ -91,23 +91,28 @@ function comprobarSelectores() {
 }
 
 function cambairFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
-    // Esta funcion no se ejecutarar hasta que el array "validar_selectores" sean todas verdadero.
+    // No se ejecutarara hasta que "validar_selectores" sean todas True.
 
-    
-    
-
-    let imagen_0       = document.getElementById("foto_electrodo_0");
-    let imagen_1       = document.getElementById("foto_electrodo_1");
-    
     let inicio_ruta = "../TSD_Electrodos/img/"    
-    let tamano_foto = "35rem"
+    let tamano_foto = "30rem"
     material_value = material.value;
     
+    // Foto 0
+    let imagen_0       = document.getElementById("foto_electrodo_0");
+    let figcap_0       = document.getElementById("figcap_0");
+
     imagen_0.style.height = tamano_foto
     imagen_0.src = inicio_ruta + material_value + "_0.png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
+    figcap_0.innerHTML = "Vista lateral"
+
+ 
+    // Foto 1
+    let imagen_1       = document.getElementById("foto_electrodo_1");
+    let figcap_1       = document.getElementById("figcap_1");
     
     imagen_1.style.height = tamano_foto
     imagen_1.src = inicio_ruta + material_value + "_1.png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
+    figcap_1.innerHTML = "Vista Superior"
     
     // anadirCota();
     // cambiarCota();

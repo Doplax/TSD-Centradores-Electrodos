@@ -100,7 +100,6 @@ label{
 .caja-foto_figure {
     padding: 0;
     margin: 0;
-
     /* Para alinearlo con los selectores */
     top: 3rem; 
 } 
@@ -108,7 +107,7 @@ label{
 figcaption{
     text-align: center;
     font-size: 2rem;
-    color: aqua;
+    font-weight: bold;
 }
 
 
