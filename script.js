@@ -16,7 +16,7 @@ function cambiarColorReferencia(){
     x.style.color = "#000000";
 }
 
-function cambiarMaterial() // Cambia el primer digito 
+function cambiarMaterialRef() // Cambia el primer digito 
 {   
     validar_selectores[0] = true
 
@@ -80,7 +80,7 @@ function cambiarDiametro()
 
 // FOTO
 function comprobarSelectores() { 
-    // Subfuncion de las funciones que son llamadas con los addEventListener, para que cada vez que haya un cambio, se compruebe cual ha sido este cambio.
+    // Subfuncion funciones usadas en addEventListener, comprueba si algo ha cambiado
     // Esta funcion se encarga de comprobar que los 4 selecores estan en TRUE, y despues ejecuta las funciones que requieran que se cumpla esa condicion
     if (validar_selectores.every(CheckTrue) == true) //Esta funcion la hemos creado arriba donde las variables
     { 
@@ -90,24 +90,27 @@ function comprobarSelectores() {
     }
 }
 
-function cambairFotoElectrodo()
-{
-    // Sub Funcion de comprobarSelectores()
+function cambairFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
     // Esta funcion no se ejecutarar hasta que el array "validar_selectores" sean todas verdadero.
-    let imagen       = document.getElementById("foto_electrodo");
-    let inicio_ruta = "../TSD_Electrodos/img_electrodos/"
+
     
-    // let _actual = referencia[0] + referencia[4] + referencia[5] 
+    
+
+    let imagen_0       = document.getElementById("foto_electrodo_0");
+    let imagen_1       = document.getElementById("foto_electrodo_1");
+    
+    let inicio_ruta = "../TSD_Electrodos/img/"    
+    let tamano_foto = "35rem"
     material_value = material.value;
-
-    console.log(material_value);
     
+    imagen_0.style.height = tamano_foto
+    imagen_0.src = inicio_ruta + material_value + "_0.png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
     
-    imagen.src = inicio_ruta + material_value + ".png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
+    imagen_1.style.height = tamano_foto
+    imagen_1.src = inicio_ruta + material_value + "_1.png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
     
-
-    anadirCota();
-    cambiarCota();
+    // anadirCota();
+    // cambiarCota();
     
 
 }
@@ -269,7 +272,7 @@ var validar_selectores = [false, true, false]; // Compruba que los 4 campos han 
 crearListaDiametro();
 
 
-material.addEventListener("change",cambiarMaterial); 
+material.addEventListener("change",cambiarMaterialRef); 
 material.addEventListener("change",crearListaDiametro); // Esta linea es la que se encarga de crear las opciones en el desplegable diametro, ya que el diametro depende del metrico
 // forma.addEventListener("change",cambiarForma);
 diametro_choice.addEventListener("change",cambiarDiametro); 

@@ -3,32 +3,40 @@
 */
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 62.5%;
+    vertical-align: top;
     
     
 }
+h1      {font-size: 3rem;}
+p       {font-size: 1.6rem;}
+label   {font-size: 2rem;}
+option  { font-size: 2rem;}
+
 #referencia {
     color: rgba(0, 0, 0, 0);
     position: relative;
-    left: 50px;
-    bottom: 10px;
+    left: 5rem;
+    bottom: 1rem;
+    font-size: 2rem;
     /* position: absolute; */
     /* top: -5%;
     left: 118%; */
 }
 .caja {
-    height: 30px;
-    width: 150px;
-    border: 2px solid rgb(0, 153, 238);
-    border-radius: 10px 10px 10px 10px;
-    font-size: 18px;
-    padding: 5px;
-    height: 35px;
-    width: 200px;
+    height: 0.3rem;
+    width: 0.15rem;
+    border: 0.2rem solid rgb(0, 153, 238);
+    border-radius: 1rem 1rem 1rem 1rem;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    height: 3.5rem;
+    width: 20rem;
 }
 .caja:hover {
-    border: 2px solid rgb(238, 107, 0);
+    border: 0.2rem solid rgb(238, 107, 0);
     
 }
 
@@ -36,48 +44,50 @@
     box-sizing: border-box;
 }
 
-#selectores, #caja-foto_centrador ,#caja-foto_electrodo{
+#selectores, #caja-foto_centrador , .caja-foto_electrodo , #caja-foto{
     
     display: inline-block;
 }
 
-#selectores{   margin-top: 0px; 
-                padding-top: 0px;}
 
 
-#main_content > h2 { margin-bottom: 0px;
-                     padding-bottom: 0px;}
+#selectores{   margin-top: 0rem; 
+                padding-top: 0rem;}
+
+
+#main_content > h2 { margin-bottom: 0rem;
+                     padding-bottom: 0rem;}
 
 
 #cota-inferior {
     border-top: solid black;             
-    border-width: 0.20em;
+    border-width: 0.02rem;
     
     text-align: center;
     
     position: relative;
 
-    bottom: 10px;
-    left: 25px;
-    width: 70px;
+    bottom: 1rem;
+    left: 2.5rem;
+    width: 7rem;
 
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
 
-    font-size: 0.9em;
+    font-size: 0.09rem;
     
 }
 
 #cota-lateral {
     border-top: solid black;             
-    border-width: 0.15em;
+    border-width: 0.015rem;
     width: 160%;
     text-align: center;
     position: relative;
     transform: rotate(-90deg);
-    /* No usar %porcentajes%, me da muchos problemas,usar referencias "Estaticas" */
-    top: 8.3em; 
-    right: -1em;
+    /* No usar %porcentajes%, me da muchos problremas,usar referencias "Estaticas" */
+    top: 0.83rem; 
+    right: -0.1rem;
     
 }
 
@@ -87,33 +97,18 @@ label{
 }
 
 
-#caja-foto_figure {
-    
-    position: relative;
+.caja-foto_figure {
     padding: 0;
     margin: 0;
 
     /* Para alinearlo con los selectores */
-    top: 30px; 
+    top: 3rem; 
 } 
 
-#btn-inferior{
-    padding: 20px;
-}
-
-
-#btn-inferior_0{
-    color: rgb(0, 0, 0);
-    background-color: rgb(4, 184, 255);
-    border: solid 2px;
-    border-radius: 5px;
-
-}
-#btn-inferior_0:hover{
-    color: rgb(0, 0, 0);
-    background-color: aqua;
-    border: solid 2px;
-    border-radius: 5px;
+figcaption{
+    text-align: center;
+    font-size: 2rem;
+    color: aqua;
 }
 
 
@@ -131,7 +126,7 @@ label{
     background-color: rgb(0, 240, 248);
 }
 
-#caja-foto_electrodo {
+.caja-foto_electrodo {
     background-color: blueviolet;
 }
 
@@ -140,3 +135,7 @@ label{
     /* Como la cota lateral, al movera deja un hueco, estoy moviendo el contenedor padre hacia arriba para parchear eso  (Igual que con la caja de la foto*/
     
 }   
+
+#selectores { 
+    background-color: rgb(135, 222, 142);
+}
