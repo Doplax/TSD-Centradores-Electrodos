@@ -9,26 +9,27 @@
     <title>Electrodos</title>
 </head>
 <body>
+    
     <div id="main_content">
         <h1>Conozca su referencia:</h2>
-        <div id="selectores">
+        <div class="selectores">
 
-            <h2 id="referencia">XM00SSNN</h2>
+            <h2 id="referencia_electrodo" class="referencia">XM00SSNN</h2>
             <label for="material"> Material: <br>
                 <select id="material" class="caja"> 
                     <option value="nada"></option>
-                    <option value="ceramica">Ceramica</option>
-                    <option value="metal">Metal</option>
+                    <option value="C">Ceramica</option>
+                    <option value="M">Metal</option>
                 </select>
             </label> <br>
 
             <label for="rosca">Rosca:  <br>
                 <select id="rosca" class="caja"> 
-                    <option value="2"></option>
-                    <option value="2">2</option>
-                    <option value="2">3</option>
-                    <option value="2">3</option>
-                    <option value="2">3</option>
+                    <option value=""></option>
+                    <option value="M18">M18</option>
+                    <option value="M20">M20</option>
+                    <option value="M22">M22</option>
+                    <option value="M24">M24</option>
 
 
                 </select>
@@ -37,61 +38,66 @@
 
             <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
             <label for="diametro"> Diametro: <br>
-                <input list="diametro" class="caja" id="diametro-choice"> 
-                <datalist id="diametro">
+                <input list="diametro_lista" class="caja" id="diametro"> 
+                <datalist id="diametro_lista">
                     <option value=""></option>
                 </datalist>     
-
-                    
-                
             </label> <br> 
-            
-                
         </div>
         
         
-        <div id="caja-foto">
-            <!-- <div id="caja-foto_centrador">
-                <figure id="caja-foto_figure">
-                    <img id="foto_centrador" width="100">
-                </figure>
-            </div> -->
-
+        <div class="caja-foto_electrodo">
             <div class="caja-foto_electrodo">
                 <figure id="figure_foto-0">
                     <img id="foto_electrodo_0">
-                    <figcaption id="figcap_0" ></figcaption>
                 </figure>  
             </div>
 
             <div class="caja-foto_electrodo">
                 <figure id="figure_foto-1">
                     <img id="foto_electrodo_1">
-                    <figcaption id="figcap_1" ></figcaption>
                 </figure>
             </div>
-
-
         </div>
 
-        
-
-            
-        
     </div>
-    <div id="selector-electrodo">
-        <p>Si quires, puedes encontrar el Centrador que necesitas introduciendo el tamaño de la rosca</p>
+    <p>Si quires, puedes encontrar el Centrador que necesitas introduciendo el tamaño de la rosca</p>
+
+    <h1>Conozca su referencia:</h2>
+           <h2 id="referencia_centrador" class="referencia">XM00SSNN</h2>
+    <div class="selectores">
         
 
-        <label for="forma">Forma: para sacar el centrador <br>
-            <select id="forma" class="caja" name="prueba"> 
-                <option value="PP"></option>
+        <label for="forma">Forma: <br>
+            <select id="forma" class="caja"> 
+                <option value=""></option>
                 <option value="DD">Diametro Doble</option>
                 <option value="DS">Diametro Simple</option>
                 <option value="DC">Diametro Corto</option>
             </select>
         </label> <br>
+
+        <label for="metrico"> Metrico: <br>
+            <select id="metrico" class="caja"> 
+                <option value="nada"></option>
+                <option value="04">04</option>
+                <option value="06">06</option>
+                <option value="08">08</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+            </select>
+        </label> <br>
+
     </div>
+
+    <div class="caja-foto_centrador">
+        <div class="caja-foto_centrador">
+            <figure id="caja-foto_figure">
+                <img id="foto_centrador" width="100">
+            </figure>
+        </div>
+    </div>
+    
     
 
     

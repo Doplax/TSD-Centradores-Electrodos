@@ -15,7 +15,7 @@ p       {font-size: 1.6rem;}
 label   {font-size: 2rem;}
 option  { font-size: 2rem;}
 
-#referencia {
+.referencia {
     color: rgba(0, 0, 0, 0);
     position: relative;
     left: 5rem;
@@ -39,56 +39,58 @@ option  { font-size: 2rem;}
     border: 0.2rem solid rgb(238, 107, 0);
     
 }
-
-#diametro-choice {
+ 
+#diametro {
     box-sizing: border-box;
 }
 
-#selectores, #caja-foto_centrador , .caja-foto_electrodo , #caja-foto{
-    
+.caja-foto_centrador , .caja-foto_electrodo, #foto_electrodo_0, #foto_electrodo_1, #figure_foto-1, #figure_foto-0 , #caja-foto_figure{
     display: inline-block;
+    padding: 0rem;
+    margin: 0rem;
 }
 
 
 
-#selectores{   margin-top: 0rem; 
-                padding-top: 0rem;}
+.selectores{    margin-top: 0rem; 
+                padding-top: 0rem;
+                display: inline-block; }
 
 
 #main_content > h2 { margin-bottom: 0rem;
                      padding-bottom: 0rem;}
 
 
-#cota-inferior {
-    border-top: solid black;             
-    border-width: 0.02rem;
-    
+#cota_foto_0 {
     text-align: center;
     
     position: relative;
 
-    bottom: 1rem;
-    left: 2.5rem;
-    width: 7rem;
+    bottom: 6rem;
+    left: 9rem;
+    width: 13rem;
 
     margin: 0rem;
     padding: 0rem;
 
-    font-size: 0.09rem;
+    font-size: 1.2rem;
     
 }
 
-#cota-lateral {
-    border-top: solid black;             
-    border-width: 0.015rem;
-    width: 160%;
+#cota_foto_1 {
     text-align: center;
-    position: relative;
-    transform: rotate(-90deg);
-    /* No usar %porcentajes%, me da muchos problremas,usar referencias "Estaticas" */
-    top: 0.83rem; 
-    right: -0.1rem;
     
+    position: relative;
+
+    bottom: 15.6rem;
+    left: 12.9rem;
+    width: 6.6rem;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    font-size: 1.5rem;
+    transform: rotate(-90deg);  
 }
 
 
@@ -108,6 +110,8 @@ figcaption{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+    position: relative;
+    bottom: 5rem;
 }
 
 
@@ -127,9 +131,11 @@ figcaption{
 
 .caja-foto_electrodo {
     background-color: blueviolet;
+    padding: 0rem;
+    margin: 0rem;
 }
 
-#referencia {
+.referencia {
     background-color: rgb(255, 251, 0);
     /* Como la cota lateral, al movera deja un hueco, estoy moviendo el contenedor padre hacia arriba para parchear eso  (Igual que con la caja de la foto*/
     
