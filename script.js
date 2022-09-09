@@ -62,7 +62,7 @@ function cambiarReferenciaElectrodo(){
 function cambiarFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
     // No se ejecutarara hasta que "validar_selectores" sean todas True.
     
-    let inicio_ruta = "../TSD_Electrodos/img/"
+    let inicio_ruta = "./TSD_Electrodos/img/"
     let tamano_foto = "30rem"
 
     // Foto 0
