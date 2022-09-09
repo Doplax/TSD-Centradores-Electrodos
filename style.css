@@ -16,7 +16,7 @@ label   {font-size: 2rem;}
 option  { font-size: 2rem;}
 
 .referencia {
-    color: rgba(0, 0, 0, 0);
+    /* color: rgba(0, 0, 0, 0); */
     position: relative;
     left: 5rem;
     bottom: 1rem;
@@ -44,7 +44,7 @@ option  { font-size: 2rem;}
     box-sizing: border-box;
 }
 
-.caja-foto_centrador , .caja-foto_electrodo, #foto_electrodo_0, #foto_electrodo_1, #figure_foto-1, #figure_foto-0 , #caja-foto_figure{
+.caja-foto_centrador , .caja-foto_electrodo, #foto_electrodo_0, #foto_electrodo_1, #figure_foto-1, #figure_centrador_foto-0 , #caja-foto_figure{
     display: inline-block;
     padding: 0rem;
     margin: 0rem;
@@ -93,6 +93,43 @@ option  { font-size: 2rem;}
     transform: rotate(-90deg);  
 }
 
+#foto_centrador {
+    height: 30rem;
+}
+
+#centrador_cota_lateral {
+    border-top: solid black;             
+    border-width: 0.20rem;
+    text-align: center;
+    position: relative;
+    transform: rotate(-90deg);
+    /* No usar %porcentajes%, me da muchos problemas,usar referencias "Estaticas" */
+
+    width: 28rem;
+    top: 18rem; 
+    left: 1rem; 
+
+    font-size: 1.3rem;
+}
+
+#centrador_cota_inferior {
+    border-top: solid black;             
+    border-width: 0.20rem;
+    
+    text-align: center;
+    position: relative;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    bottom: 1rem;
+    left: 3rem;
+    width: 10rem;
+
+    font-size: 1.3rem;
+}
+
+
 
 label{
     font-weight: bold;
@@ -137,7 +174,6 @@ figcaption{
 
 .referencia {
     background-color: rgb(255, 251, 0);
-    /* Como la cota lateral, al movera deja un hueco, estoy moviendo el contenedor padre hacia arriba para parchear eso  (Igual que con la caja de la foto*/
     
 }   
 

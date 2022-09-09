@@ -44,16 +44,21 @@ function comprobarSelectores() {
                 
     }
     cambiarFotoElectrodo()
-        cambiarFotoCentrador()
-        cambiarReferencia()
+    cambiarFotoCentrador()
+    //cambiarReferenciaCentrador()
+    cambiarReferenciaElectrodo()
 }
 
-function cambiarReferencia(){
-    let x = document.getElementById("referencia_centrador");
-    x.style.color = "#000000";
+// ELECTRODO
+function cambiarReferenciaElectrodo(){
+    let x = document.getElementById("referencia_electrodo");
+
+    let temp = material.value + rosca.value + diametro.value;
+
+    x.innerText = temp
+
 }
 
-// FOTO
 function cambiarFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
     // No se ejecutarara hasta que "validar_selectores" sean todas True.
     
@@ -77,20 +82,6 @@ function cambiarFotoElectrodo(){ // Sub Funcion de comprobarSelectores()
 
 }
 
-function cambiarFotoCentrador() // Hay que actualizar esto
-{
-    // Sub Funcion de comprobarSelectores()
-    if (forma.value != "") {
-
-        let imagen = document.getElementById("foto_centrador");
-
-        let actual = material.value + forma.value
-        
-        imagen.src = "../TSD_Centradores/img/centradores-400x827/" + actual + ".png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
-    }  
-    cotasCentrador();                                                          
-}
-
 function cotasElectrodo()   // Sub-Function of: cambiarCentrador()
 {
     /* 
@@ -102,7 +93,7 @@ function cotasElectrodo()   // Sub-Function of: cambiarCentrador()
     if (temp == null) 
     {
     // FOTO 0
-        let cajaImagen_0    =  document.getElementById("figure_foto-0");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
+        let cajaImagen_0    =  document.getElementById("figure_electrodo_foto-0");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
 
         let cota_foto_0        = document.createElement("div");
         cota_foto_0.id         = "cota_foto_0";
@@ -110,7 +101,7 @@ function cotasElectrodo()   // Sub-Function of: cambiarCentrador()
 
 
     // FOTO 1
-        let cajaImagen_1    =  document.getElementById("figure_foto-1");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
+        let cajaImagen_1    =  document.getElementById("figure_electrodo_foto-1");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
 
         let cota_foto_1        = document.createElement("div");
         cota_foto_1.id         = "cota_foto_1";
@@ -125,58 +116,122 @@ function cotasElectrodo()   // Sub-Function of: cambiarCentrador()
 
 }
 
-function cotaCentrador()  // cambiarCentrador()
-{ // Sub-Function of: cambiar()
+// CENTRADOR
+function cambiarReferenciaCentrador(){
+    let x = document.getElementById("referencia_centrador");
+
+    // x.style.color = "#000000";
+
+
+    console.log(material.value);
+    let value1 = material.value;
+
+    console.log(forma.value);
+    let value2 = forma.value;
+
+    console.log(metrico.value);
+    let value3 = metrico.value
+
+    console.log(diametro.value);
+    let value4 = diametro.value
+
+    let final = value1 + value2 + value3 + value4
+    console.log(final);
+
+
+    
+    
+}
+
+function cambiarFotoCentrador() // Hay que actualizar esto
+{
+    // Sub Funcion de comprobarSelectores()
+    if (forma.value != "") {
+
+        let imagen = document.getElementById("foto_centrador");
+
+        let actual = material.value + forma.value
+        
+        imagen.src = "../TSD_Centradores/img/centradores-400x827/" + actual + ".png"; // Con imagen.src se cambia solo, no hay que usar inner ni nada de eso
+    }  
+    cotasCentrador();                                                          
+}
+
+function cotasCentrador(){ 
+
+    temp = document.getElementById("centrador_cota_inferior");
+    if (temp == null) 
+    { 
+        let cajaImagen    =  document.getElementById("figure_centrador");  // Creamos la variable a la que luego le anadiremos los DIVs con appendChild
+        
+
+        // COTA INFERIOR
+        let cotaInferior        = document.createElement("div");
+        cotaInferior.id         = "centrador_cota_inferior";
+        cajaImagen.appendChild(cotaInferior);
+        
+
+        // COTA LATERAL
+        let cotaLateral        = document.createElement("div");
+        cotaLateral.id         = "centrador_cota_lateral";
+        // cajaImagen.appendChild(cotaLateral);
+        cajaImagen.insertBefore(cotaLateral,cajaImagen.children[0])
+    }
+    
     m = metrico.value;
     f = forma.value;
 
 
     switch (m) {
         case ("04"):
-            document.getElementById("cota-inferior").innerHTML = "10 mm"
+            document.getElementById("centrador_cota_inferior").innerHTML = "10 mm"
 
-            if    (f == "DC")   {document.getElementById("cota-lateral").innerHTML = "26.5 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "31 mm"  }
+            if    (f == "DC")   {document.getElementById("centrador_cota_lateral").innerHTML = "26.5 mm"}
+            else                {document.getElementById("centrador_cota_lateral").innerHTML = "31 mm"  }
 
             break;
         
         case ("06"):
-            document.getElementById("cota-inferior").innerHTML = "11,5 mm"
+            document.getElementById("centrador_cota_inferior").innerHTML = "11,5 mm"
 
-            if    (f == "DC")   {document.getElementById("cota-lateral").innerHTML = "27.5 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "34 mm"}
+            if    (f == "DC")   {document.getElementById("centrador_cota_lateral").innerHTML = "27.5 mm"}
+            else                {document.getElementById("centrador_cota_lateral").innerHTML = "34 mm"}
             
             break;
 
         case ("08"):
-            document.getElementById("cota-inferior").innerHTML = "13.5 mm"
+            document.getElementById("centrador_cota_inferior").innerHTML = "13.5 mm"
             
-            if     (f == "DC")  {document.getElementById("cota-lateral").innerHTML = "28.3 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "34 mm"}
+            if     (f == "DC")  {document.getElementById("centrador_cota_lateral").innerHTML = "28.3 mm"}
+            else                {document.getElementById("centrador_cota_lateral").innerHTML = "34 mm"}
 
             break;
         
         case ("10"):
-            document.getElementById("cota-inferior").innerHTML = "16 mm";
+            document.getElementById("centrador_cota_inferior").innerHTML = "16 mm";
 
-            if     (f == "DC")  {document.getElementById("cota-lateral").innerHTML = "32.3 mm"}
-            else                {document.getElementById("cota-lateral").innerHTML = "40 mm"}
+            if     (f == "DC")  {document.getElementById("centrador_cota_lateral").innerHTML = "32.3 mm"}
+            else                {document.getElementById("centrador_cota_lateral").innerHTML = "40 mm"}
 
             break;
 
         case ("12"):
-            document.getElementById("cota-inferior").innerHTML = "18 mm"
+            document.getElementById("centrador_cota_inferior").innerHTML = "18 mm"
             
-            if (f == "DC") {document.getElementById("cota-lateral").innerHTML = "34.1 mm"}
-            else {document.getElementById("cota-lateral").innerHTML = " 43 mm"}
+            if (f == "DC") {document.getElementById("centrador_cota_lateral").innerHTML = "34.1 mm"}
+            else {document.getElementById("centrador_cota_lateral").innerHTML = " 43 mm"}
 
             break;
     }
 }
 
+
+
+
 /////// VARIABLES Y MAIN //////////////////
 crearListaDiametro();
 const CheckTrue = (currentValue) => currentValue == true; // Nos sirve para comprobar que todos los elementos del array sean True
+var validar_selectores = [false, false, false]; // Compruba que los 4 campos han sido modificados, una vez comprobemos que han sido modificados, podremos cargar la 
 
 
 var referencia          = document.getElementById("referencia_electrodo").innerText; // Para coger unicamente el texto, no el objeto
@@ -186,7 +241,6 @@ var forma               = document.getElementById("forma");
 var diametro            = document.getElementById("diametro");
 var rosca               = document.getElementById("rosca")
 
-var validar_selectores = [false, false, false]; // Compruba que los 4 campos han sido modificados, una vez comprobemos que han sido modificados, podremos cargar la 
 
 
 
@@ -194,10 +248,14 @@ var validar_selectores = [false, false, false]; // Compruba que los 4 campos han
 material.addEventListener("change",comprobarSelectores); 
 diametro.addEventListener("change",comprobarSelectores); 
 rosca.addEventListener("change", comprobarSelectores);
-
 forma.addEventListener("change",comprobarSelectores);
 metrico.addEventListener("change",comprobarSelectores);
 
 
+// Pruebas 
+let mapa = new Map();
+mapa.set("nombre","pedro");
+mapa.set("apellidos","gomez");
+mapa.set("edad",20);
 
 
