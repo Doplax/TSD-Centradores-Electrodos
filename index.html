@@ -2,108 +2,21 @@
 
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="https://tecsolda.com/wp-content/uploads/2022/05/cropped-logo-tecsolda-32x32.png">
-    <title>Electrodos</title>
+    <title>Indice</title>
 </head>
 <body>
+    <header>
+        <button id="btn_centrador">Centrador</button>
+        <button id="btn_electrodo">Electrodo para Centrador</button>
+        <button id="btn_perno">Electrodo para Perno</button>
+    </header>
     
-    <div id="main_content">
-        <h1>Conozca su referencia:</h2> 
-        <div class="selectores">
-
-            <h2 id="referencia_electrodo" class="referencia">XM00SSNN</h2>
-            <label for="material"> Material: <br>
-                <select id="material" class="caja"> 
-                    <option value=""></option>
-                    <option value="C">Ceramica</option>
-                    <option value="M">Metal</option>
-                </select>
-            </label> <br>
-
-            <label for="rosca">Rosca:  <br>
-                <select id="rosca" class="caja"> 
-                    <option value=""></option>
-                    <option value="M18">M18</option>
-                    <option value="M20">M20</option>
-                    <option value="M22">M22</option>
-                    <option value="M24">M24</option>
-
-
-                </select>
-            </label> <br>
-            
-
-            <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
-            <label for="diametro"> Diametro: <br>
-                <input list="diametro_lista" class="caja" id="diametro"> 
-                <datalist id="diametro_lista">
-                    <option value=""></option>
-                </datalist>     
-            </label> <br> 
-        </div>
-        
-        
-        <div class="caja-foto_electrodo">
-            <div class="caja-foto_electrodo">
-                <figure id="figure_electrodo_foto-0">
-                    <img id="foto_electrodo_0">
-                </figure>  
-            </div>
-
-            <div class="caja-foto_electrodo">
-                <figure id="figure_electrodo_foto-1">
-                    <img id="foto_electrodo_1">
-                </figure>
-            </div>
-        </div>
-
-    </div>
-    <p>Si quires, puedes encontrar el Centrador que necesitas introduciendo el tamaño de la rosca</p>
-
-    <h1>Conozca su referencia:</h2>
-    <div class="selectores">
-        <h2 id="referencia_centrador" class="referencia">XM00SSNN</h2>
-
-
-        <label for="forma">Forma: <br>
-            <select id="forma" class="caja"> 
-                <option value=""></option>
-                <option value="DD">Diametro Doble</option>
-                <option value="DS">Diametro Simple</option>
-                <option value="DC">Diametro Corto</option>
-            </select>
-        </label> <br>
-
-        <label for="metrico"> Metrico: <br>
-            <select id="metrico" class="caja"> 
-                <option value=""></option>
-                <option value="04">04</option>
-                <option value="06">06</option>
-                <option value="08">08</option>
-                <option value="10">10</option>
-                <option value="12">12</option>
-            </select>
-        </label> <br>
-
-    </div>
-
-    <div class="caja-foto_centrador">
-        <div class="caja-foto_centrador">
-            <figure id="figure_centrador">
-                <img id="foto_centrador" >
-            </figure>
-        </div>
-    </div>
-    
-   
-
-    
-
-    
-    
-    <script src="./script.js"></script>
+    <iframe id="iframe" src="" frameborder="0"></iframe>
+    <script src="./js/cambiar_iframe.js"></script>
 </body>
 </html>

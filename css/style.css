@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #3388BB;
+    --secondary-color: #667799;
+}
+
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html    {font-size: 62.5%; }
+h1      {font-size: 3.2rem;}
+h2      {font-size: 2rem;  }
+h3      {font-size: 1.9rem;}
+h4      {font-size: 1.6rem;}
+p       {font-size: 1.6rem;}
+
+img {height: 30rem;}
+
+label{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    /* margin: 2rem; */
+    /* overflow: hidden; */
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+    header > button {
+        background-color: var(--primary-color);
+        color: aliceblue;
+
+        font-size: 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        height: 4rem;
+        width: 25rem;
+        margin: 1rem;
+    }
+
+    header > button:hover {
+        border: 0.2rem solid black;
+        background-color: var(--secondary-color);
+        color: aliceblue;
+
+
+    }
+
+iframe {
+    height: 98vh;
+    width: 98vw;
+}
+.referencia {
+    background-color: #DDDDDD;
+    text-align: center;
+    border: solid .2rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}   
+
+    .referencia:hover {
+        color: var(--primary-color);
+    }
+
+
+
+.caja {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 22rem;
+}
+
+.caja:hover {
+    border: 2px solid var(--secondary-color);
+}
+
+
+
+.main { 
+    padding: 2rem;
+    margin: 1rem;
+    border: solid .2rem;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#centrador_cota_inferior {
+    text-align: center;
+    position: relative;
+    bottom: 1.2rem;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#centrador_cota_lateral {
+    text-align: center;
+    position: relative;
+    transform: rotate(-90deg) translate(-15rem, 8rem);
+    font-size: 1.3rem;
+    /* No usar %porcentajes%, me da muchos problemas,usar referencias "Estaticas" */
+    font-weight: bold;
+}
+
+#electrodo_cota_foto_0 {
+    text-align: center;
+    
+    position: relative;
+
+    bottom: 6rem;
+    left: 9rem;
+    width: 13rem;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    
+}
+
+#electrodo_cota_foto_1 {
+    text-align: center;
+    
+    position: relative;
+
+    bottom: 15.6rem;
+    left: 12.9rem;
+    width: 6.6rem;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    font-size: 1.3rem;
+    transform: rotate(-90deg);  
+
+    font-weight: bold;
+
+}
+
+
+
+.caja_foto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.estado_visible {
+    opacity: 1;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+
+    
+}
+
+.estado_invisible {
+    opacity: 0;
+    display: block;
+    transform: translate(0rem, 10rem);
+}
+
+ 
