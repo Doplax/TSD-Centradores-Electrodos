@@ -1,22 +1,17 @@
 
 // CAMBIAR IFRAME
-let btn_centrador   = document.getElementById("btn_centrador");
-let btn_electrodo   = document.getElementById("btn_electrodo");
-let btn_perno       = document.getElementById("btn_perno");
-let iframe          = document.getElementById("iframe");
+const btn_centrador = document.getElementById("btn_centrador");
+btn_centrador.addEventListener("click", () => iframe.src = "html/centrador.html");
 
-btn_centrador.addEventListener("click", function () {
-    // iframe.src = "../html/centradores.html"; // Local
-    iframe.src = "html/centrador.html" ;//Web
-});
+const btn_electrodo = document.getElementById("btn_electrodo");
+btn_electrodo.addEventListener("click", () => iframe.src = "html/electrodo.html");
 
-btn_electrodo.addEventListener("click", function () {
-    // iframe.src = "../html/electrodo.html"; // Local
-    iframe.src = "html/electrodo.html"; //Web
-});
+const btn_perno= document.getElementById("btn_perno");
+btn_perno.addEventListener("click", () => iframe.src = "html/perno.html");
 
-btn_perno.addEventListener("click", function () {
-    // iframe.src = "../html/pernos.html";  //Local
-    iframe.src = "html/perno.html" ;//Web
-});
+
+let iframe = document.getElementById("iframe");
+
+
+
 

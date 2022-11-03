@@ -1,6 +1,6 @@
 function comprobarSelectores() {
 
-    // Hasta que las cajas no esten "LLenas" no haran nada.
+    // Hasta que los inputs  no esten "LLenos" no haran nada.
     if ((material.value && forma.value && metrico.value  && diametro.value) !=  "")
     { 
         cambiarReferenciaCentrador()
@@ -34,7 +34,7 @@ function crearListaDiametro()
     if (metrico_value == "08") { anadirOpcionesDiametro(metrico_8)}
     if (metrico_value == "10") { anadirOpcionesDiametro(metrico_10)}
     if (metrico_value == "12") { anadirOpcionesDiametro(metrico_12)}
-}
+};
 
 function anadirOpcionesDiametro(lista)  // Sub-Function of: crearListaDiametro()
 {
@@ -49,8 +49,7 @@ function anadirOpcionesDiametro(lista)  // Sub-Function of: crearListaDiametro()
         option.text = temp; 
         diametro.appendChild(option); 
     }
-}
-
+};
 /////// VARIABLES Y MAIN //////////////////
 var referencia   = document.getElementById("referencia_centrador").innerHTML; // Para coger unicamente el texto, no el objeto
 var material     = document.getElementById("material");
@@ -66,7 +65,6 @@ metrico.addEventListener("change",comprobarSelectores);
 forma.addEventListener("change",comprobarSelectores);
 diametro.addEventListener("change",comprobarSelectores); // Esta linea cambiara los digitos que hay en la referencia
 material.addEventListener("change",comprobarSelectores); 
-
 
 rosca.addEventListener("change",comprobarSelectores)
 

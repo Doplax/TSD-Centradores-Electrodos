@@ -29,11 +29,6 @@ label{
     flex-direction: column;
 }
 
-body {
-    /* margin: 2rem; */
-    /* overflow: hidden; */
-}
-
 header {
     display: flex;
     justify-content: space-around;
@@ -55,8 +50,6 @@ header {
         border: 0.2rem solid black;
         background-color: var(--secondary-color);
         color: aliceblue;
-
-
     }
 
 iframe {
@@ -182,3 +175,6 @@ iframe {
 }
 
  
+
+
+@media 
