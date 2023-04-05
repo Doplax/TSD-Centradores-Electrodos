@@ -27,7 +27,7 @@ function cambiarReferenciaCentrador(){
 function cambairFotoCentrador() {
     let imagen       = document.getElementById("foto_centrador");
     let foto_actual  = material.value + forma.value  
-    imagen.src = "../img/centradores/" + foto_actual + ".PNG"; 
+    imagen.src = "./img/centradores/" + foto_actual + ".PNG"; 
 }
 
 function cotasCentador(){

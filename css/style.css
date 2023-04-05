@@ -84,10 +84,35 @@ header {
 .main { 
     padding: 2rem;
     margin: 1rem;
-    border: solid .2rem;
     border-radius: 0.9rem;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.selectores {
+    flex: 0;
+}
+
+.fotos {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+
+.active {
+    opacity: 1;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+
+    
+}
+
+.inactive {
+    opacity: 0;
+    display: none;
+    transform: translate(0rem, 10rem);
 }
 
 
@@ -148,29 +173,5 @@ header {
 
 
 
-.caja_foto {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
-.estado_visible {
-    opacity: 1;
-    transition-delay: 0.5s;
-    transition-duration: 1s;
-
-    
-}
-
-.estado_invisible {
-    opacity: 0;
-    display: block;
-    transform: translate(0rem, 10rem);
-}
-
-.inactive {
-    display: none;
-}
 
 
