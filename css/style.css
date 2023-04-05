@@ -9,7 +9,6 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 html    {font-size: 62.5%; }
@@ -52,10 +51,7 @@ header {
         color: aliceblue;
     }
 
-iframe {
-    height: 98vh;
-    width: 98vw;
-}
+
 .referencia {
     background-color: #DDDDDD;
     text-align: center;
@@ -146,7 +142,6 @@ iframe {
 
     font-size: 1.3rem;
     transform: rotate(-90deg);  
-
     font-weight: bold;
 
 }
@@ -174,7 +169,8 @@ iframe {
     transform: translate(0rem, 10rem);
 }
 
- 
+.inactive {
+    display: none;
+}
 
 
-@media 
