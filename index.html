@@ -13,14 +13,31 @@
 </head>
 <body id="menu-html">
     <header id="header">
-        <button id="btn_centrador"  class="btn btn-primary" type="button">Centrador</button>
-        <!--<button id="btn_centrador">Centrador</button>-->
-        <button id="btn_electrodo" class="btn btn-primary" type="button" >Electrodo para Centrador</button>
-        <button id="btn_perno" class="btn btn-primary" type="button">Electrodo para Perno</button>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-fluid justify-content-center">
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarToggleExternalContent">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><button id="btn_centrador"  class="btn btn-primary w-100" type="button">Centrador</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button id="btn_electrodo" class="btn btn-primary w-100" type="button">Electrodo para Centrador</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button id="btn_perno" class="btn btn-primary w-100" type="button">Electrodo para Perno</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    
     <iframe id="iframe" src="" frameborder="0"></iframe>
     <script src="./js/cambiar_iframe.js"></script>
-
 </body>
+
+
 </html>

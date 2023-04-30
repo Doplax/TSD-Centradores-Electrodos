@@ -43,7 +43,6 @@ label{
 
 #header button {
     font-size: 2rem;
-    padding: 0px 30px ;
 }
 
 
@@ -174,6 +173,8 @@ iframe {
     #header {
         display: flex;
         flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
     #header button {
         margin: 0.1rem;
@@ -183,7 +184,11 @@ iframe {
         display: flex;
         justify-content: center;
         align-items: start;
+        margin: 1rem;
     }
+    h3 {
+        font-size: 2.2rem;
+        margin: 0.5rem 2rem;}
 }  
 
 
