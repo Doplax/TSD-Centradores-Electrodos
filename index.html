@@ -20,7 +20,7 @@
 
     <main>
         <div id="container-centrador" class="inactive">
-            <div class="main">
+            <div class="container">
                 <div class="selectores">
                     <h2 class="referencia" id="referencia_centrador">REFERENCIA</h2>
 
@@ -70,8 +70,10 @@
                     </div>
                 </div>
             </div>
-            <div id="invisible" class="estado_invisible">
-                <h3>Encuentra AQUÍ el Electrodo que estás buscando:</h3>
+
+            <h3>Encuentra AQUÍ el Electrodo que estás buscando:</h3>
+            <div class="container">
+            <!--<div class="inactive">-->
                 <div class="main">
                     <div class="selectores">
                         <h2 class="referencia" id="referencia_electrodo">REFERENCIA</h2>
@@ -98,10 +100,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- end container-centrador -->
 
         <div id="container-electrodo" class="inactive">
-            <div class="main">
+            <div class="container">
                 <div class="selectores">
                     <h2 class="referencia" id="referencia_electrodo">REFERENCIA</h2>
                     <label for="material">
@@ -123,12 +125,13 @@
                         </select>
                     </label>
 
-                    <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
                     <label for="diametro">
                         Diametro:
                         <input list="diametro_lista" class="caja" id="diametro" />
                         <datalist id="diametro_lista">
                             <option value=""></option>
+                                <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
+
                         </datalist>
                     </label>
                 </div>
@@ -178,7 +181,7 @@
                     </main>
                 </div>
             </div>
-        </div>
+        </div> <!-- end: container-electrodo -->
 
         <div id="container-perno" class="inactive">
             <div class="main">
@@ -218,7 +221,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- end: container-perno -->
     </main>
 
     <!-- Centradores -->
