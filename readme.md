@@ -6,7 +6,7 @@ Este proyecto es una herramienta web diseñada para la empresa Tecsolda que perm
 
 ### Descripción General
 
-La aplicacion está pensada para que segun los siguientes parametros seleccionados:
+La aplicación está pensada para que según los siguientes parámetros seleccionados:
 - material 
 - diámetro
 - rosca
