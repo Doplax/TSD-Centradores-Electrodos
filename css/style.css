@@ -9,13 +9,14 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    overflow: hidden;
+    /*overflow: visible;*/
 }
 
 html    {font-size: 62.5%; }
 h1      {font-size: 3.2rem;}
 h2      {font-size: 2rem;  }
-h3      {font-size: 1.9rem;}
+h3      {font-size: 2.2rem;
+         margin: 0.5rem 5rem;}
 h4      {font-size: 1.6rem;}
 p       {font-size: 1.6rem;}
 
@@ -28,29 +29,24 @@ label{
     display: flex;
     flex-direction: column;
 }
+#menu-html{
+    overflow: hidden;
 
-header {
-    display: flex;
-    justify-content: space-around;
 }
 
-    header > button {
-        background-color: var(--primary-color);
-        color: aliceblue;
+#header {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem;
+}
 
-        font-size: 2rem;
-        border: none;
-        border-radius: 0.5rem;
-        height: 4rem;
-        width: 25rem;
-        margin: 1rem;
-    }
+#header button {
+    font-size: 2rem;
+    padding: 0px 30px ;
+}
 
-    header > button:hover {
-        border: 0.2rem solid black;
-        background-color: var(--secondary-color);
-        color: aliceblue;
-    }
+
 
 iframe {
     height: 98vh;
@@ -87,13 +83,13 @@ iframe {
 
 .main { 
     padding: 2rem;
-    margin: 1rem;
-    border: solid .2rem;
-    border-radius: 0.9rem;
+    margin: 20px 50px 20px 50px;
+    box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.7rem;
     display: flex;
     flex-wrap: wrap;
-}
 
+}
 
 
 #centrador_cota_inferior {
@@ -174,7 +170,20 @@ iframe {
     transform: translate(0rem, 10rem);
 }
 
- 
+@media (max-width: 600px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+    }
+    #header button {
+        margin: 0.1rem;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+}  
 
 
-@media 
