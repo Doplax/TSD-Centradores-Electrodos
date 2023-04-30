@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="https://tecsolda.com/wp-content/uploads/2022/05/cropped-logo-tecsolda-32x32.png">
+    <title>Centradores</title>
+</head>
+<body>
+
+ 
+    <main class="main">
+        <div class="selectores">
+            <h2 class="referencia" id="referencia_centrador">REFERENCIA</h2>
+
+            <label for="metrico"> Metrico de la tuerca: 
+                <select id="metrico" class="caja"> 
+                    <option value=""></option>
+                    <option value="04">04</option>
+                    <option value="06">06</option>
+                    <option value="08">08</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+            </label> 
+
+            
+
+            <!-- No tiene nada pk lo llenaremos con JS en funcion del metrico correspondiendo -->
+            <label for="diametro"> Diametro centraje: 
+                <select id="diametro" class="caja"> 
+                    <option value="MM"></option>
+                </select>
+            </label>  
+            <label for="forma">Forma del centrador:  
+                <select id="forma" class="caja"> 
+                    <option value="PP"></option>
+                    <option value="DD">Diametro Doble</option>
+                    <option value="DS">Diametro Simple</option>
+                    <option value="DC">Diametro Corto</option>
+                </select>
+            </label> 
+
+            <label for="material"> Material del centrador: 
+                <select id="material" class="caja"> 
+                    <option value=""></option>
+                    <option value="C">Ceramica</option>
+                    <option value="M">Metal</option>
+                </select>
+            </label> 
+
+        </div>
+        
+        
+        <div class="fotos">
+            <div id="caja-foto_centrador">
+                <figure id="caja-foto_figure">
+                    <img id="foto_centrador">
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <div id="invisible" class="estado_invisible">
+        
+        <h3>Encuentra AQUÍ el Electrodo que estás buscando:</h3>
+        <div class="main">
+            <div class="selectores">
+                <h2 class="referencia" id="referencia_electrodo">REFERENCIA</h2>
+                
+                <label for="rosca">Metrico de la Rosca:  
+                    <select id="rosca" class="caja"> 
+                        <option value=""></option>
+                        <option value="18">M18</option>
+                        <option value="20">M20</option>
+                        <option value="22">M22</option>
+                        <option value="24">M24</option>
+                    </select>
+                </label> 
+            </div>
+        
+
+            <div class="caja_foto">
+                <figure id="figure_electrodo_foto-0">
+                    <img id="foto_electrodo_0">
+                </figure>  
+            
+                <figure id="figure_electrodo_foto-1">
+                    <img id="foto_electrodo_1">
+                </figure>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/centradores_script.js"></script>
+    <script src="../js/comunes.js"></script>
+
+</body>
+</html>

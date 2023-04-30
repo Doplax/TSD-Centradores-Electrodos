@@ -1,0 +1,181 @@
+/* 
+
+*/
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 62.5%;
+    vertical-align: top;
+    
+    
+}
+h1      {font-size: 3rem;}
+p       {font-size: 1.6rem;}
+label   {font-size: 2rem;}
+option  { font-size: 2rem;}
+
+.referencia {
+    /* color: rgba(0, 0, 0, 0); */
+    position: relative;
+    left: 5rem;
+    bottom: 1rem;
+    font-size: 2rem;
+
+}
+.caja {
+    height: 0.3rem;
+    width: 0.15rem;
+    border: 0.2rem solid rgb(0, 153, 238);
+    border-radius: 1rem 1rem 1rem 1rem;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    height: 3.5rem;
+    width: 20rem;
+}
+.caja:hover {
+    border: 0.2rem solid rgb(238, 107, 0);
+    
+}
+ 
+#diametro {
+    box-sizing: border-box;
+}
+
+.caja-foto_centrador , .caja-foto_electrodo, #foto_electrodo_0, #foto_electrodo_1, #figure_foto-1, #figure_centrador_foto-0 , #caja-foto_figure{
+    display: inline-block;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+
+
+.selectores{    
+    margin-top: 0rem; 
+                padding-top: 0rem;
+                display: inline-block; }
+
+
+#main_content > h2 { margin-bottom: 0rem;
+                     padding-bottom: 0rem;}
+
+
+#cota_foto_0 {
+    text-align: center;
+    
+    position: relative;
+
+    bottom: 6rem;
+    left: 9rem;
+    width: 13rem;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    font-size: 1.2rem;
+    
+}
+
+#cota_foto_1 {
+    text-align: center;
+    
+    position: relative;
+
+    bottom: 15.6rem;
+    left: 12.9rem;
+    width: 6.6rem;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    font-size: 1.5rem;
+    transform: rotate(-90deg);  
+}
+
+#foto_centrador {
+    height: 30rem;
+}
+
+#centrador_cota_lateral {
+    border-top: solid black;             
+    border-width: 0.20rem;
+    text-align: center;
+    position: relative;
+    transform: rotate(-90deg);
+    /* No usar %porcentajes%, me da muchos problemas,usar referencias "Estaticas" */
+
+    width: 28rem;
+    top: 18rem; 
+    left: 1rem; 
+
+    font-size: 1.3rem;
+}
+
+#centrador_cota_inferior {
+    border-top: solid black;             
+    border-width: 0.20rem;
+    
+    text-align: center;
+    position: relative;
+
+    margin: 0rem;
+    padding: 0rem;
+
+    bottom: 1rem;
+    left: 3rem;
+    width: 10rem;
+
+    font-size: 1.3rem;
+}
+
+
+
+label{
+    font-weight: bold;
+}
+
+
+.caja-foto_figure {
+    padding: 0;
+    margin: 0;
+    /* Para alinearlo con los selectores */
+    top: 3rem; 
+} 
+
+figcaption{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 5rem;
+}
+
+
+
+
+
+/* PRUEBAS */
+
+#main_content {
+    background-color: red;
+}
+
+
+#caja-foto_centrador{
+    background-color: rgb(0, 240, 248);
+}
+
+.caja-foto_electrodo {
+    background-color: blueviolet;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.referencia {
+    background-color: rgb(255, 251, 0);
+    
+}   
+
+#selectores { 
+    background-color: rgb(135, 222, 142);
+}
