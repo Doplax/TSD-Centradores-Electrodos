@@ -29,6 +29,14 @@ label{
     display: flex;
     flex-direction: column;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 #menu-html{
     overflow: hidden;
 
@@ -88,6 +96,8 @@ iframe {
     border-radius: 0.7rem;
     display: flex;
     flex-wrap: wrap;
+    max-width: 1200px;
+    min-width: 900px;
 
 }
 
@@ -151,6 +161,8 @@ iframe {
 
 .caja_foto {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
